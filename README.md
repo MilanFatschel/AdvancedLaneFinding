@@ -114,7 +114,7 @@ The green represents the area that was searched:
 LaneDetection.ipynb (Under Measuring Cuvature of Lines)
 
 The radius of curvature for each line was then calculated with the radius of 
-curvature formula which can be found in the code. It was then necesaary to convert 
+curvature formula which can be found in the code. It was then necessary to convert 
 these values to real world space by using meters per pixels based on real lane
 measurements in each direction. Both of the curvatures were then averaged into 
 one curvature.
@@ -137,7 +137,7 @@ Here's a [link to my video result](./output_video.mp4)
 
 #### 1. Futher Challenges
 
-The main issue with this code at the moment is that it can not handle changes in lane
+The main issue with this code at the moment is that it cannot handle changes in lane
 colors very well. We see this in the more challenging videos where there is an abundant
 amount of shadows and change in brightness.The filters are set to relatively tight lane 
 color constraints using the s channel. In order to impove this other channels or filtering
