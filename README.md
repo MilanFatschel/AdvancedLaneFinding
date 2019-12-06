@@ -100,7 +100,7 @@ to fit a polynomial throught these windows:
 ![alt text][image7]
 
 After knowing the location of the lane-lines, the program can be optimized 
-by using this information. Instead of researching the whole image, the program 
+by using this information. Instead of re-searching the whole image, the program 
 can look in the same location + or - some margin width since lane-lines are
 continuous throughout a video.
 
