@@ -79,7 +79,7 @@ destination (`dst`) points.  I hardcoded the source and destination points as pa
 since the camera and image sizes were static. I verified that my perspective transform was 
 working as expected by drawing the `src` and `dst` points onto a test image and its warped 
 counterpart to verify that the lines appear parallel in the warped image. The OpenCV function
-warpPerspective was used which creates a translation matrix based on given source points and
+warpPerspective() was used which creates a translation matrix based on given source points and
 destination points.  
 
 ![alt text][image5]
@@ -88,18 +88,18 @@ destination points.
 
 LaneDetection.ipynb (Under Histogram)
 
-I then used a histogram to see where the most pixels were in the image. 
+I then used a histogram to find where the greatest peaks of pixels were in the image. 
 The two peaks would show where the two lane lines were, which gave starting points:
 
 ![alt text][image6]
 
 After finding the peaks, the sliding window approach was used to find the mean
-pixel locations within a specified area. The function fit_polynomial was then used 
+pixel locations within a specified area. The function fit_polynomial() was then used 
 to fit a polynomial throught these windows:
 
 ![alt text][image7]
 
-After knowing the location of the lane-lines, the program can be more efficient 
+After knowing the location of the lane-lines, the program can be optimized 
 by using this information. Instead of researching the whole image, the program 
 can look in the same location + or - some margin width since lane-lines are
 continuous throughout a video.
@@ -113,8 +113,8 @@ The green represents the area that was searched:
 
 LaneDetection.ipynb (Under Measuring Cuvature of Lines)
 
-The radius of curvature for each line was then calculate with the Radius of 
-Curvature formula which can be found in the code. It was then necesaary to convert 
+The radius of curvature for each line was then calculated with the radius of 
+curvature formula which can be found in the code. It was then necesaary to convert 
 these values to real world space by using meters per pixels based on real lane
 measurements in each direction. Both of the curvatures were then averaged into 
 one curvature.
@@ -127,7 +127,7 @@ one curvature.
 
 ---
 
-### Pipeline (video)
+### Final Result (video)
 
 Here's a [link to my video result](./output_video.mp4)
 
@@ -135,7 +135,7 @@ Here's a [link to my video result](./output_video.mp4)
 
 ### Discussion
 
-#### 1. Futher Chellenges
+#### 1. Futher Challenges
 
 The main issue with this code at the moment is that it can not handle changes in lane
 colors very well. We see this in the more challenging videos where there is an abundant
