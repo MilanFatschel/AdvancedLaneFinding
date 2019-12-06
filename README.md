@@ -65,7 +65,7 @@ LaneDetection.ipynb (Under Gradient Direction / Color Filter Combination)
 
 I used a combination of color and gradient thresholds to generate a binary image. This included the 
 combination of filters such as sobel, magnitude, gradient and color (s channel) to retrieve an
-image that highlights both sets of lanes nicely. This process was a mostly trial and error process 
+image that highlights both sets of lanes nicely. This was mostly a trial and error process 
 of tuning thresholds to get the correct effect.
 
 ![alt text][image4]
